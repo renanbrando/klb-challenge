@@ -1,0 +1,20 @@
+.select-border {
+  border-radius: 8px;
+  border: 2px solid #326c96;
+}
+
+.card-shadow {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.btn-outline-custom {
+  color: #326c96;
+  border-color: #326c96;
+}
+
+
+.btn-outline-custom:hover {
+  color: #fff;
+  background-color: #326c96;
+  border-color: #fff;
+}

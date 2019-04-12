@@ -1,46 +1,110 @@
 <div class="m-3">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item" aria-current="page">Home</li>
-      <li class="breadcrumb-item active" aria-current="page">Active</li>
+      <li class="breadcrumb-item" aria-current="page">Página Inicial</li>
+      <li class="breadcrumb-item active" aria-current="page">Painel de Gestão</li>
     </ol>
   </nav>
-  <div class="row">
+  <div class="row mb-5">
     <div class="col-8">
-        <h1>Painel de Gestao</h1>
+      <h1><i class="fas fa-1x fa-globe" style="margin: 0 16px 0 16px;"></i>Painel de Gestão</h1>
     </div>
     <div class="col-4">
-      Produto
+      <div class="input-group input-group-lg select-border">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Produto</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Selecione...</option>
+          <option value="1">Todos</option>
+          <option value="2">Produto A</option>
+          <option value="3">Produto B</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <div class="card card-shadow">
+        <div class="card-header bg-white">
+          <h2>Atalhos</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <p>Operacional</p>
+            </div>
+            <div class="col-4">
+              <p>Geral</p>
+            </div>
+          </div>
+          <div class="row mx-2">
+            <div class="col-4"><button type="button" class="btn btn-outline-custom btn-block m-2 p-3">Envio</button></div>
+            <div class="col-4"><button type="button" class="btn btn-outline-custom btn-block m-2 p-3">Assinatura</button></div>
+            <div class="col-4"><button type="button" class="btn btn-outline-custom btn-block m-2 p-3">Carteira</button></div>
+          </div>
+          <div class="row mx-2">
+            <div class="col-4"><button type="button" class="btn btn-outline-custom btn-block m-2 p-3">Envio de Duplicatas</button></div>
+            <div class="col-4"><button type="button" class="btn btn-outline-custom btn-block m-2 p-3">Assinatura Digital</button></div>
+            <div class="col-4"><button type="button" class="btn btn-outline-custom btn-block m-2 p-3">Instruçōes</button></div>
+          </div>
+          <div class="row mx-2">
+            <div class="col-4"><button type="button" class="btn btn-outline-custom btn-block m-2 p-3">Nova Operação</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card card-shadow">
+        <div class="card-header bg-white">
+          <div class="row">
+            <div class="col">
+                <h2 class="text-secondary">Alertas</h2>
+            </div>
+            <div class="col text-right">
+              <p>Últimos 5 dias</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+            <div class="list-group list-group-flush my-4 p-2">
+                <div class="list-group-item">
+                  <p>23 Notas Canceladas</p>
+                </div>
+                <div class="list-group-item">
+                  <div class="row">
+                    <div class="col-8">
+                      <p>13 Notas Canceladas</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group select-border">
+                            <select class="custom-select" id="inputGroupSelect02">
+                              <option selected>Açōes...</option>
+                              <option *ngFor="let action of actions" [value]="action.value">{{action.text}}</option>
+                            </select>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-8">
+                        <p>7 Assinaturas Digitais</p>
+                      </div>
+                      <div class="col-4">
+                          <div class="input-group select-border">
+                              <select class="custom-select" id="inputGroupSelect03">
+                                <option selected>Açōes...</option>
+                                <option *ngFor="let action of actions" [value]="action.value">{{action.text}}</option>
+                              </select>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
 
-
-
-    <div class="row">
-      <div class="col-8">
-        <div class="card">
-          <div class="card-header bg-white">
-            Featured
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <div class="card-header bg-white">
-            Featured
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  
 </div>

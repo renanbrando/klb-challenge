@@ -1,20 +1,45 @@
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a href="#">About</a>
-<hr>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <div class="input-group">
+    <input type="text" class="form-control nav-search" placeholder="Pesquise aqui" aria-label="Pesquise aqui"
+      aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-light nav-search" type="button"><i class="fas fa-search" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <a *ngFor="let menu of menus" href="#"><i [ngClass]="'nav-icon fas fa-2x fa-'+ menu.icon"></i>{{menu.title}}</a>
 </div>
 <div id="main">
-  <nav class="navbar navbar-dark bg-dark justify-content-between">
-    <button class="navbar-toggler" type="button" (click)="openNav()">
+  <nav class="navbar navbar-light bg-white justify-content-between">
+    <button class="navbar-toggler" type="button" (click)="toggleNav()">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand">Navbar</a>
+    <span class="mr-auto ml-3 app-title">SRM</span>
     <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <div class="input-group mx-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text bg-custom" for="inputGroupSelect01">Grupo Econômico</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option value="1">Visão agregada 1</option>
+          <option value="2">Visão agregada 2</option>
+          <option value="3">Visão agregada 3</option>
+        </select>
+      </div>
+      <div class="input-group mx-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text bg-custom" for="inputGroupSelect01"><i class="fas fa-user"></i></label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option value="1">Sandra Oliveira</option>
+          <option value="2">John Doe</option>
+          <option value="3">Jane Doe</option>
+        </select>
+        <div class="input-group-append">
+          <label class="input-group-text bg-custom" for="inputGroupSelect01">
+            <i class="fas fa-bell"></i><span class="badge badge-danger">4</span>
+          </label>
+        </div>
+      </div>
     </form>
   </nav>
   <router-outlet></router-outlet>
